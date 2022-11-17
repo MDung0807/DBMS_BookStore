@@ -28,18 +28,6 @@ begin
 end
 go
 
---Tìm kiếm một Account
-create or alter function func_searchAccount(@idAcc varchar(8) , @userName varchar(20), @password varchar(30), @typeAcc bit, @idEmp varchar(8) )
-returns table
-as
-	return ( select *
-	from dbo.ACCOUNT
-	where ACCOUNT.idAccount=@idAcc and
-			ACCOUNT.nameAccount like @userName+'%' and 
-			ACCOUNT.password like @password+'%' and 
-			ACCOUNT.typeOfAcc = typeOfAcc and 
-			ACCOUNT.idEmployee=@idEmp )
-go
 --Trả về danh sách các thể loại của sách
 create or alter function func_getAllCategoryOfBook(@idBook varchar(8) )
 returns table
