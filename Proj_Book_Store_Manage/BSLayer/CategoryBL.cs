@@ -103,10 +103,10 @@ namespace Proj_Book_Store_Manage.BSLayer
             return db.ExecuteFunction(strSQL, CommandType.Text, parameters, ref err);
         }*/
 
-        public DataTable searchCategory(string id, string username, ref string err)
+        public DataTable searchCategory(string id, string name, ref string err)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', '{username}')";
+            cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', N'{name}')";
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);
