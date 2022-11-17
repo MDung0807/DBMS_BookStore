@@ -58,7 +58,6 @@ namespace Proj_Book_Store_Manage.UI
                     {
                         if (category.deleteCategory(utl.IDCurrent, ref err) == true)
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show("Xoá thất bại !");
@@ -96,7 +95,6 @@ namespace Proj_Book_Store_Manage.UI
                         category.addNewCategory(this.lblIDCategory.Text, this.txtNameCategory.Text, this.txtDescribe.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm thể loại thành công !");
                         }
                         else
                         {
@@ -115,7 +113,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa thể loại thành công !");
                     }
                     else
                     {

@@ -65,7 +65,6 @@ namespace Proj_Book_Store_Manage.UI
                         publisher.deletePublisher(utl.IDCurrent, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show(err);
@@ -102,7 +101,6 @@ namespace Proj_Book_Store_Manage.UI
                         publisher.addNewPublisher(this.lblIDPublisher.Text, this.txtNamePublisher.Text, this.txtAddress.Text, this.txtPhoneNumber.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm tài khoản thành công !");
                         }
                         else
                         {
@@ -121,7 +119,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa tài khoản thành công !");
                     }
                     else
                     {

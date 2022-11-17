@@ -71,15 +71,15 @@ namespace Proj_Book_Store_Manage.UI
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(903, 276);
+            this.panel2.Location = new System.Drawing.Point(789, 276);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(169, 371);
+            this.panel2.Size = new System.Drawing.Size(283, 299);
             this.panel2.TabIndex = 4;
             // 
             // btnReload
             // 
-            this.btnReload.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(35, 310);
+            this.btnReload.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.Location = new System.Drawing.Point(173, 120);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(110, 43);
             this.btnReload.TabIndex = 1;
@@ -90,7 +90,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(35, 25);
+            this.btnAdd.Location = new System.Drawing.Point(50, 5);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 43);
             this.btnAdd.TabIndex = 1;
@@ -101,7 +101,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(35, 139);
+            this.btnDelete.Location = new System.Drawing.Point(50, 119);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(110, 43);
             this.btnDelete.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(35, 82);
+            this.btnEdit.Location = new System.Drawing.Point(50, 62);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(110, 43);
             this.btnEdit.TabIndex = 1;
@@ -123,7 +123,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(35, 196);
+            this.btnSave.Location = new System.Drawing.Point(173, 6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 43);
             this.btnSave.TabIndex = 1;
@@ -134,7 +134,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(35, 253);
+            this.btnCancel.Location = new System.Drawing.Point(173, 63);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 43);
             this.btnCancel.TabIndex = 1;
@@ -150,7 +150,7 @@ namespace Proj_Book_Store_Manage.UI
             this.dgvAuthor.ReadOnly = true;
             this.dgvAuthor.RowHeadersWidth = 51;
             this.dgvAuthor.RowTemplate.Height = 24;
-            this.dgvAuthor.Size = new System.Drawing.Size(682, 280);
+            this.dgvAuthor.Size = new System.Drawing.Size(682, 245);
             this.dgvAuthor.TabIndex = 5;
             this.dgvAuthor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAuthor_CellClick);
             // 
@@ -159,7 +159,6 @@ namespace Proj_Book_Store_Manage.UI
             this.txtPassword.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(188, 168);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(247, 30);
             this.txtPassword.Size = new System.Drawing.Size(145, 26);
             this.txtPassword.TabIndex = 2;
             // 
@@ -168,7 +167,6 @@ namespace Proj_Book_Store_Manage.UI
             this.txtUserName.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(188, 114);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(247, 30);
             this.txtUserName.Size = new System.Drawing.Size(145, 26);
             this.txtUserName.TabIndex = 2;
             // 
@@ -179,7 +177,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblPassword.Location = new System.Drawing.Point(21, 174);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(124, 28);
             this.lblPassword.Size = new System.Drawing.Size(84, 20);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Mật Khẩu";
@@ -191,7 +188,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblUserName.Location = new System.Drawing.Point(21, 113);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(190, 28);
             this.lblUserName.Size = new System.Drawing.Size(127, 20);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "Tên Đăng Nhập";
@@ -217,7 +213,7 @@ namespace Proj_Book_Store_Manage.UI
             this.gbAccount.Size = new System.Drawing.Size(682, 224);
             this.gbAccount.TabIndex = 0;
             this.gbAccount.TabStop = false;
-            this.gbAccount.Text = "Thông tin tác giả";
+            this.gbAccount.Text = "Thông tin tài khoản";
             // 
             // lblID
             // 
@@ -225,7 +221,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblID.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.Location = new System.Drawing.Point(184, 54);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(71, 28);
             this.lblID.Size = new System.Drawing.Size(48, 20);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "None";
@@ -237,10 +232,9 @@ namespace Proj_Book_Store_Manage.UI
             this.cbTypeAcc.Items.AddRange(new object[] {
             "Admin",
             "Nhân Viên"});
-            this.cbTypeAcc.Location = new System.Drawing.Point(688, 76);
             this.cbTypeAcc.Location = new System.Drawing.Point(523, 110);
             this.cbTypeAcc.Name = "cbTypeAcc";
-            this.cbTypeAcc.Size = new System.Drawing.Size(136, 31);
+            this.cbTypeAcc.Size = new System.Drawing.Size(136, 26);
             this.cbTypeAcc.TabIndex = 4;
             // 
             // cbEmployee
@@ -249,10 +243,9 @@ namespace Proj_Book_Store_Manage.UI
             this.cbEmployee.FormattingEnabled = true;
             this.cbEmployee.Items.AddRange(new object[] {
             "1"});
-            this.cbEmployee.Location = new System.Drawing.Point(688, 122);
             this.cbEmployee.Location = new System.Drawing.Point(523, 175);
             this.cbEmployee.Name = "cbEmployee";
-            this.cbEmployee.Size = new System.Drawing.Size(136, 31);
+            this.cbEmployee.Size = new System.Drawing.Size(136, 26);
             this.cbEmployee.TabIndex = 3;
             // 
             // lblEmployee
@@ -262,7 +255,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblEmployee.Location = new System.Drawing.Point(377, 177);
             this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(134, 28);
             this.lblEmployee.Size = new System.Drawing.Size(90, 20);
             this.lblEmployee.TabIndex = 1;
             this.lblEmployee.Text = "Nhân Viên";
@@ -274,7 +266,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblTypeAcc.Location = new System.Drawing.Point(377, 116);
             this.lblTypeAcc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTypeAcc.Name = "lblTypeAcc";
-            this.lblTypeAcc.Size = new System.Drawing.Size(184, 28);
             this.lblTypeAcc.Size = new System.Drawing.Size(124, 20);
             this.lblTypeAcc.TabIndex = 1;
             this.lblTypeAcc.Text = "Loại Tài Khoản";
@@ -286,7 +277,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblIDAcount.Location = new System.Drawing.Point(184, 54);
             this.lblIDAcount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDAcount.Name = "lblIDAcount";
-            this.lblIDAcount.Size = new System.Drawing.Size(0, 23);
+            this.lblIDAcount.Size = new System.Drawing.Size(0, 21);
             this.lblIDAcount.TabIndex = 0;
             // 
             // lbl10
@@ -296,7 +287,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lbl10.Location = new System.Drawing.Point(21, 54);
             this.lbl10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(138, 28);
             this.lbl10.Size = new System.Drawing.Size(92, 20);
             this.lbl10.TabIndex = 0;
             this.lbl10.Text = "ID Account";
@@ -372,13 +362,14 @@ namespace Proj_Book_Store_Manage.UI
             // UControlAccount
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvAuthor);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "UControlAccount";
-            this.Size = new System.Drawing.Size(1072, 647);
+            this.Size = new System.Drawing.Size(1072, 575);
             this.Load += new System.EventHandler(this.UControlAccount_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAuthor)).EndInit();

@@ -88,7 +88,6 @@ namespace Proj_Book_Store_Manage.UI
                     {
                         if (book.deleteBook(utl.IDCurrent, ref err) == true)
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show("Xoá thất bại !");
@@ -126,7 +125,6 @@ namespace Proj_Book_Store_Manage.UI
                         book.addNewBook(this.lblIDBook.Text, this.txtNameBook.Text, this.ptbBook.Image, int.Parse(this.txtPriceImport.Text), int.Parse(this.txtPriceExport.Text), this.cbIDPublisher.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm sách thành công !");
                         }
                         else
                         {
@@ -145,7 +143,6 @@ namespace Proj_Book_Store_Manage.UI
                     LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa sách thành công !");
                     }
                     else
                     {
@@ -193,7 +190,6 @@ namespace Proj_Book_Store_Manage.UI
                 {
                     if (book.deleteBookCategory(this.lblIDBook.Text, this.cbaddCategory.Text, ref err))
                     {
-                        MessageBox.Show("Xóa thành công !");
                     }
                     else
                     {
@@ -230,7 +226,6 @@ namespace Proj_Book_Store_Manage.UI
                         book.addNewBookCategory(this.lblIDBook.Text, this.cbaddCategory.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm thể loại cho sách có mã "+utl.IDCurrent+" thành công !");
                         }
                         else
                         {
@@ -249,7 +244,6 @@ namespace Proj_Book_Store_Manage.UI
                     LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa thể loại cho sách có mã " + this.lblIDBook.Text + " thành công !");
                     }
                     else
                     {
@@ -287,7 +281,6 @@ namespace Proj_Book_Store_Manage.UI
                 {
                     if (book.deleteBookAuthor(this.lblIDBook.Text, this.cbaddAuthor.Text, ref err))
                     {
-                        MessageBox.Show("Xóa thành công !");
                     }
                     else
                     {
@@ -323,7 +316,6 @@ namespace Proj_Book_Store_Manage.UI
                         book.addNewBookAuthor(this.lblIDBook.Text, this.cbaddAuthor.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm tác giả cho sách có mã " + utl.IDCurrent + " thành công !");
                         }
                         else
                         {
@@ -342,7 +334,6 @@ namespace Proj_Book_Store_Manage.UI
                     LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa tác giả cho sách có mã " + this.lblIDBook.Text + " thành công !");
                     }
                     else
                     {

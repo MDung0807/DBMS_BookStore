@@ -219,7 +219,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(22, 235);
+            this.btnCancel.Location = new System.Drawing.Point(152, 64);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 43);
             this.btnCancel.TabIndex = 1;
@@ -241,7 +241,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(22, 178);
+            this.btnSave.Location = new System.Drawing.Point(152, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 43);
             this.btnSave.TabIndex = 1;
@@ -252,7 +252,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnReload
             // 
             this.btnReload.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(22, 292);
+            this.btnReload.Location = new System.Drawing.Point(152, 121);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(110, 43);
             this.btnReload.TabIndex = 1;
@@ -269,9 +269,9 @@ namespace Proj_Book_Store_Manage.UI
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(886, 227);
+            this.panel2.Location = new System.Drawing.Point(769, 227);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(169, 336);
+            this.panel2.Size = new System.Drawing.Size(286, 300);
             this.panel2.TabIndex = 1;
             // 
             // dgvAuthor
@@ -279,7 +279,7 @@ namespace Proj_Book_Store_Manage.UI
             this.dgvAuthor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAuthor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvAuthor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAuthor.Location = new System.Drawing.Point(30, 265);
+            this.dgvAuthor.Location = new System.Drawing.Point(30, 234);
             this.dgvAuthor.Name = "dgvAuthor";
             this.dgvAuthor.ReadOnly = true;
             this.dgvAuthor.RowHeadersWidth = 51;
@@ -299,7 +299,7 @@ namespace Proj_Book_Store_Manage.UI
             this.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UControlAuthor";
-            this.Size = new System.Drawing.Size(1055, 563);
+            this.Size = new System.Drawing.Size(1055, 527);
             this.Load += new System.EventHandler(this.UControlAuthor_Load);
             this.panel1.ResumeLayout(false);
             this.gpSearch.ResumeLayout(false);
