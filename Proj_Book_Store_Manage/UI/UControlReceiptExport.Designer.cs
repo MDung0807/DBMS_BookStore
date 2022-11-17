@@ -32,6 +32,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearchBy = new System.Windows.Forms.Label();
             this.gpSearch = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.cbAttributeSearch = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnReload = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.gpSearch.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceiptExport)).BeginInit();
@@ -104,6 +104,17 @@
             this.gpSearch.TabStop = false;
             this.gpSearch.Text = "Tìm kiếm";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(182, 118);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(110, 43);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Tìm Kiếm";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // cbAttributeSearch
             // 
             this.cbAttributeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -122,7 +133,7 @@
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(903, 198);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(169, 370);
+            this.panel2.Size = new System.Drawing.Size(169, 307);
             this.panel2.TabIndex = 10;
             // 
             // btnReload
@@ -163,7 +174,7 @@
             this.dgvReceiptExport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvReceiptExport.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvReceiptExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReceiptExport.Location = new System.Drawing.Point(42, 240);
+            this.dgvReceiptExport.Location = new System.Drawing.Point(16, 214);
             this.dgvReceiptExport.Name = "dgvReceiptExport";
             this.dgvReceiptExport.ReadOnly = true;
             this.dgvReceiptExport.RowHeadersWidth = 51;
@@ -325,17 +336,6 @@
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "ID Bill:";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(182, 118);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(110, 43);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "Tìm Kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // UControlReceiptExport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -343,7 +343,7 @@
             this.Controls.Add(this.dgvReceiptExport);
             this.Controls.Add(this.panel1);
             this.Name = "UControlReceiptExport";
-            this.Size = new System.Drawing.Size(1072, 568);
+            this.Size = new System.Drawing.Size(1072, 505);
             this.Load += new System.EventHandler(this.UControlReceiptExport_Load);
             this.gpSearch.ResumeLayout(false);
             this.gpSearch.PerformLayout();

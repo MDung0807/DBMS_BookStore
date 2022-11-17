@@ -87,7 +87,7 @@ namespace Proj_Book_Store_Manage.BSLayer
         public DataTable searchTypeCustomer(string id, string name, ref string err)
         {
             SqlCommand cmd = new SqlCommand();
-            cmd.CommandText = $"select * from dbo.func_searchTypeCustomer('{id}', '{name}')";
+            cmd.CommandText = $"select * from dbo.func_searchTypeCustomer('{id}', N'{name}')";
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);

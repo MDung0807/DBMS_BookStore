@@ -80,7 +80,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.lbIdEmployee.AutoSize = true;
             this.lbIdEmployee.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIdEmployee.Location = new System.Drawing.Point(372, 88);
+            this.lbIdEmployee.Location = new System.Drawing.Point(412, 37);
             this.lbIdEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIdEmployee.Name = "lbIdEmployee";
             this.lbIdEmployee.Size = new System.Drawing.Size(18, 20);
@@ -91,7 +91,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.dtpReceiptImport.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpReceiptImport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReceiptImport.Location = new System.Drawing.Point(367, 38);
+            this.dtpReceiptImport.Location = new System.Drawing.Point(189, 84);
             this.dtpReceiptImport.Name = "dtpReceiptImport";
             this.dtpReceiptImport.Size = new System.Drawing.Size(200, 27);
             this.dtpReceiptImport.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(123, 87);
+            this.lblTotal.Location = new System.Drawing.Point(123, 141);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(18, 20);
@@ -122,7 +122,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.lblInfoTotal.AutoSize = true;
             this.lblInfoTotal.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoTotal.Location = new System.Drawing.Point(8, 88);
+            this.lblInfoTotal.Location = new System.Drawing.Point(8, 142);
             this.lblInfoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoTotal.Name = "lblInfoTotal";
             this.lblInfoTotal.Size = new System.Drawing.Size(82, 20);
@@ -144,7 +144,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.lblEmployee.AutoSize = true;
             this.lblEmployee.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployee.Location = new System.Drawing.Point(186, 87);
+            this.lblEmployee.Location = new System.Drawing.Point(271, 37);
             this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.Size = new System.Drawing.Size(118, 20);
@@ -155,7 +155,7 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.lblDateImport.AutoSize = true;
             this.lblDateImport.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateImport.Location = new System.Drawing.Point(186, 36);
+            this.lblDateImport.Location = new System.Drawing.Point(8, 82);
             this.lblDateImport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateImport.Name = "lblDateImport";
             this.lblDateImport.Size = new System.Drawing.Size(134, 20);
@@ -192,7 +192,7 @@ namespace Proj_Book_Store_Manage.UI
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(903, 204);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(169, 364);
+            this.panel2.Size = new System.Drawing.Size(169, 306);
             this.panel2.TabIndex = 7;
             // 
             // cbAttributeSearch
@@ -252,7 +252,7 @@ namespace Proj_Book_Store_Manage.UI
             // dgvReceiptImport
             // 
             this.dgvReceiptImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReceiptImport.Location = new System.Drawing.Point(73, 235);
+            this.dgvReceiptImport.Location = new System.Drawing.Point(30, 220);
             this.dgvReceiptImport.Name = "dgvReceiptImport";
             this.dgvReceiptImport.ReadOnly = true;
             this.dgvReceiptImport.RowHeadersWidth = 51;
@@ -293,7 +293,7 @@ namespace Proj_Book_Store_Manage.UI
             this.Controls.Add(this.dgvReceiptImport);
             this.Controls.Add(this.panel1);
             this.Name = "UControlReceiptImport";
-            this.Size = new System.Drawing.Size(1072, 568);
+            this.Size = new System.Drawing.Size(1072, 510);
             this.Load += new System.EventHandler(this.UControlReceiptImport_Load);
             this.gbReceiptImport.ResumeLayout(false);
             this.gbReceiptImport.PerformLayout();
