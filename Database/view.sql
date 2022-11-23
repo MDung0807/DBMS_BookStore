@@ -37,9 +37,6 @@ select idaccount,nameaccount,password,case when dbo.ACCOUNT.typeOfAcc=1
 											end as TypeAcc,idemployee
 from dbo.ACCOUNT
 go
-select *
-from dbo.view_Account
-go
 
 --View hóa đơn nhập
 create or alter view view_ReceiptImport
@@ -48,12 +45,6 @@ select *
 from dbo.BILLINPUT
 go 
 
-----View chi tiết hóa đơn nhập
---create or alter view view_DetailReceiptImport
---as
---select *
---from dbo.BOOK_BILLINPUT
---go
 --View hóa đơn xuất
 create or alter view view_ReceiptExport
 as
@@ -66,12 +57,6 @@ as
 select BOOK.idBook as ID, BOOK.nameBook as N'Tên Sách', BOOK.amount as N'Số lượng', BOOK.priceExport as N'Giá'
 from dbo.BOOK
 go
---create or alter view view_getDataOfBillOutput
---as
---select BOOK_BILLOUTPUT.idBook as ID, BOOK_BILLOUTPUT.nameBook as N'Tên Sách', BOOK_BILLOUTPUT.amount as N'Số lượng'
---from dbo.BOOK_BILLOUTPUT, dbo.BOOK
---where dbo.BOOK_BILLOUTPUT.idBook
---go
 
 --View thông tin khách hàng
 create or alter view view_Customer
@@ -100,5 +85,5 @@ go
 
 ---------------------------------------------------------------------------Tân thêm
 ---View doanh thu
-create view view_top5StockMin
+create or alter view view_top5StockMin
 as select top 5 nameBook,amount from BOOK order by amount asc

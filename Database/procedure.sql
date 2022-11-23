@@ -29,9 +29,7 @@ begin
 	commit transaction addNewAcc
 	end try
 	begin catch
-		declare @errorMess nvarchar(200)
-		set @errorMess = ERROR_MESSAGE()
-		raiserror (@errorMess, 16, 1)
+		raiserror(N'Không thể tạo quyền cho user',16,1)
 		rollback transaction addNewAcc
 	end catch
 end
@@ -720,11 +718,10 @@ begin
 	end
 
 	update dbo.BILLINPUT
-	set dateOfInput=@dateTimeOfBill, idEmployee=@idEmp
+	set dateOfInput=@dateTimeOfBill, idEmployee=@idEmp, stateBill=1
 	where dbo.BILLINPUT.idBillInput=@idBillInput
 end
 go
-
 --Xác nhận hủy một hóa đơn đang thêm
 create or alter procedure proc_cancelBillImport
 @idBill varchar(8) 
@@ -900,21 +897,27 @@ begin
 
 		--Cập nhật hóa đơn vào bảng
 		update dbo.BILLOUTPUT
-		set dateOfBill=@dateTimeOfBill, idCus=@idCus, idEmployee=@idEmp, idVoucher=@idVoucher, total=@totalOfBill
+		set dateOfBill=@dateTimeOfBill, idCus=@idCus, idEmployee=@idEmp, idVoucher=@idVoucher, total=@totalOfBill, stateBill=1
 		where dbo.BILLOUTPUT.idBillOutPut=@idBillOutput
-	
+		
+		--Cập nhật lại số lượng voucher
+		if(@idVoucher is not null)
+		begin
+			update dbo.VOUCHER
+			set amount=amount-1
+			where idVoucher=@idVoucher
+		end
 		--Cập lại điểm tích lũy và Type cho khách hàng
 		declare @amountBookInBill int, @amountBookTotal int
 		select @amountBookInBill=(select sum(amountOutput) from dbo.BOOK_BILLOUTPUT where dbo.BOOK_BILLOUTPUT.idBillOutput=@idBillOutput)
 		select @amountBookTotal=@amountBookInBill+(select dbo.CUSTOMER.pointCus from dbo.CUSTOMER where dbo.CUSTOMER.idCus=@idCus)
 		exec proc_updateTypeCusForCus @amountBooksBought=@amountBookTotal, @idCus=@idCus
-		--Cập nhật trạng thái của đơn hàng
-		update dbo.BILLOUTPUT
-		set stateBill = 1
-		where dbo.BILLOUTPUT.idBillOutPut = @idBillOutput
 		commit transaction
 	end try
 	begin catch
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction
 	end catch
 end
@@ -976,17 +979,34 @@ end
 go
 
 
---Xóa bỏ đơn hàng khi trạng thái đơn hàng false
+--Xóa bỏ đơn hàng xuất khi trạng thái đơn hàng false
 create or alter procedure proc_deleteBillOutput 
 as
 begin
 	begin transaction
 	begin try
 		declare @idBillOutput varchar(8)
-		set @idBillOutput = (select dbo.func_returnIdBillFalse())
+		set @idBillOutput = (select dbo.func_returnIdBillOutFalse())
 	
-		print (@idBillOutput)
 		exec proc_cancelBillExport @idBillOutput
+		commit transaction
+	end try
+	begin catch 
+		rollback transaction
+	end catch
+end
+go
+
+--Xóa bỏ đơn hàng nhập khi trạng thái đơn hàng false
+create or alter procedure proc_deleteBillInput
+as
+begin
+	begin transaction
+	begin try
+		declare @idBillInput varchar(8)
+		set @idBillInput = (select dbo.func_returnIdBillInFalse())
+	
+		exec proc_cancelBillImport @idBillInput
 		commit transaction
 	end try
 	begin catch 
@@ -1026,7 +1046,7 @@ go
 
 ----------------------------------------------Tân thêm-------------------------------
 ---Procedure show doanh thu trong khoảng begin end---
-create or alter proc sp_ShowRevenue
+create or alter proc proc_ShowRevenue
 @begin date , @end date
 as
 begin
@@ -1036,7 +1056,7 @@ begin
 end
 go
 ----Procedure show top 5 sản phẩm bán chạy nhất trong khoảng begin end-----
-create or alter proc sp_ShowTop5Book
+create or alter proc proc_ShowTop5Book
 @begin date , @end date
 as
 begin
@@ -1050,7 +1070,7 @@ begin
 end
 go
 -------Tổng quan về tổng doanh thu trong khoảng thời gian--------
-create or alter proc sp_Overview_Revenue
+create or alter proc proc_Overview_Revenue
 @begin date, @end date
 as
 begin
@@ -1060,7 +1080,7 @@ begin
 end
 go
 ------Tổng quan về số hóa đơn trong khoảng thời gian----------
-create or alter proc sp_Overview_AmountBillOutput
+create or alter proc proc_Overview_AmountBillOutput
 @begin date, @end date
 as
 begin
@@ -1070,7 +1090,7 @@ begin
 end
 go
 -----Tổng quan về số sách bán được trong khoảng thời gian--------
-create or alter proc sp_Overview_AmountBookBillOutput
+create or alter proc proc_Overview_AmountBookBillOutput
 @begin date, @end date
 as
 begin

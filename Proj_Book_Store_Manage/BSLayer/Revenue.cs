@@ -27,7 +27,7 @@ namespace Proj_Book_Store_Manage.BSLayer
 
         public DataTable getRevenue(DateTime begin, DateTime end, ref string err)
         {
-            strSQL = "sp_ShowRevenue";
+            strSQL = "proc_ShowRevenue";
             parameters = new List<SqlParameter>();
 
             parameter = new SqlParameter("@begin ", begin);
@@ -41,7 +41,7 @@ namespace Proj_Book_Store_Manage.BSLayer
 
         public DataTable getTop5Book(DateTime begin, DateTime end, ref string err)
         {
-            strSQL = "sp_ShowTop5Book";
+            strSQL = "proc_ShowTop5Book";
             parameters = new List<SqlParameter>();
 
             parameter = new SqlParameter("@begin ", begin);
@@ -60,7 +60,7 @@ namespace Proj_Book_Store_Manage.BSLayer
 
         public DataTable getOverView_Revenue(DateTime begin, DateTime end, ref string err)
         {
-            strSQL = "sp_Overview_Revenue";
+            strSQL = "proc_Overview_Revenue";
             parameters = new List<SqlParameter>();
 
             parameter = new SqlParameter("@begin ", begin);
@@ -73,7 +73,7 @@ namespace Proj_Book_Store_Manage.BSLayer
         }
         public DataTable get_Overview_AmountBillOutput(DateTime begin, DateTime end, ref string err)
         {
-            strSQL = "sp_Overview_AmountBillOutput";
+            strSQL = "proc_Overview_AmountBillOutput";
             parameters = new List<SqlParameter>();
 
             parameter = new SqlParameter("@begin ", begin);
@@ -87,7 +87,7 @@ namespace Proj_Book_Store_Manage.BSLayer
 
         public DataTable get_Overview_AmountBookBillOutput(DateTime begin, DateTime end, ref string err)
         {
-            strSQL = "sp_Overview_AmountBookBillOutput";
+            strSQL = "proc_Overview_AmountBookBillOutput";
             parameters = new List<SqlParameter>();
 
             parameter = new SqlParameter("@begin ", begin);

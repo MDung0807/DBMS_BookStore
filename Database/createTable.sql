@@ -162,6 +162,8 @@ idBillInput varchar(8) NOT NULL,
 dateOfInput date NULL,
 total int NOT NULL DEFAULT 0,
 idEmployee varchar(8) NULL,
+stateBill bit default 0
+
 
 CONSTRAINT pk_billinput PRIMARY KEY (idBillInput),
 CONSTRAINT fk_employee_checkin FOREIGN KEY (idEmployee) REFERENCES EMPLOYEE (idEmployee)
