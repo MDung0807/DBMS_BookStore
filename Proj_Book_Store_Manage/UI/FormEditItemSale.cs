@@ -54,7 +54,6 @@ namespace Proj_Book_Store_Manage.UI
             cart.modifyItemInCart(this.idBook,this.amount, int.Parse(this.nnrAmount.Text.ToString()), ref err);
             if (err == "")
             {
-                result = MessageBox.Show("Cập nhật thành công");
             }
             else
             {

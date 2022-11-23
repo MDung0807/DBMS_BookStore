@@ -81,7 +81,6 @@ namespace Proj_Book_Store_Manage.UI
                         author.addNewAuthor(this.lblIDAuthor.Text, this.txtNameAuthor.Text, this.txtPhoneNumber.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm tài khoản thành công !");
                         }
                         else
                         {
@@ -100,7 +99,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa tài khoản thành công !");
                     }
                     else
                     {
@@ -137,7 +135,6 @@ namespace Proj_Book_Store_Manage.UI
                     {
                         if (author.deleteAuthor(utl.IDCurrent, ref err) == true)
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show("Xoá thất bại !");

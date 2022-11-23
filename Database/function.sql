@@ -134,7 +134,7 @@ go
 ----------------------------------------------CHỨC NĂNG XEM CHI TIẾT ĐƠN HÀNG XUất---------------
 --Trả về tên sách
 create or alter function func_getNameBookById(@idBook varchar(8) )
-returns varchar(20)
+returns nvarchar(20)
 begin
 	return (select dbo.BOOK.nameBook
 	from dbo.BOOK
@@ -300,10 +300,10 @@ as
 	return (
 		select * from TYPECUSTOMER
 		where idTypeCus = @id or
-				nameTypeCus = nameTypeCus
+				nameTypeCus = @name
 	)
 go
-
+select * from dbo.func_searchTypeCustomer (null, N'Vàng')
 --- Hàm tìm kiếm hóa đơn Nhập hàng
 Create or alter function func_searchReceiptImport(@idBill varchar(8) )
 returns table

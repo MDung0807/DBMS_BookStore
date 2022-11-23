@@ -72,9 +72,7 @@ namespace Proj_Book_Store_Manage.UI
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-
-            this.panel1.Size = new System.Drawing.Size(222, 789);
-            this.panel1.Size = new System.Drawing.Size(222, 774);
+            this.panel1.Size = new System.Drawing.Size(222, 788);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -83,7 +81,7 @@ namespace Proj_Book_Store_Manage.UI
             this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelSide.Location = new System.Drawing.Point(0, 145);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(31, 106);
+            this.panelSide.Size = new System.Drawing.Size(31, 74);
             this.panelSide.TabIndex = 3;
             // 
             // btnVoucher
@@ -93,9 +91,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnVoucher.FlatAppearance.BorderSize = 0;
             this.btnVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoucher.Image = ((System.Drawing.Image)(resources.GetObject("btnVoucher.Image")));
-            this.btnVoucher.Location = new System.Drawing.Point(30, 675);
+            this.btnVoucher.Location = new System.Drawing.Point(28, 511);
             this.btnVoucher.Name = "btnVoucher";
-            this.btnVoucher.Size = new System.Drawing.Size(191, 106);
+            this.btnVoucher.Size = new System.Drawing.Size(191, 73);
             this.btnVoucher.TabIndex = 3;
             this.btnVoucher.Text = "Voucher";
             this.btnVoucher.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -111,9 +109,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnEmployee.FlatAppearance.BorderSize = 0;
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.Image = ((System.Drawing.Image)(resources.GetObject("btnEmployee.Image")));
-            this.btnEmployee.Location = new System.Drawing.Point(30, 569);
+            this.btnEmployee.Location = new System.Drawing.Point(28, 438);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(191, 106);
+            this.btnEmployee.Size = new System.Drawing.Size(191, 73);
             this.btnEmployee.TabIndex = 3;
             this.btnEmployee.Text = "Nhân Viên";
             this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -129,9 +127,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
-            this.btnCustomer.Location = new System.Drawing.Point(30, 463);
+            this.btnCustomer.Location = new System.Drawing.Point(28, 365);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Size = new System.Drawing.Size(191, 106);
+            this.btnCustomer.Size = new System.Drawing.Size(191, 73);
             this.btnCustomer.TabIndex = 3;
             this.btnCustomer.Text = "Khách Hàng";
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -147,9 +145,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnReceipt.FlatAppearance.BorderSize = 0;
             this.btnReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceipt.Image = ((System.Drawing.Image)(resources.GetObject("btnReceipt.Image")));
-            this.btnReceipt.Location = new System.Drawing.Point(30, 357);
+            this.btnReceipt.Location = new System.Drawing.Point(28, 292);
             this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Size = new System.Drawing.Size(191, 106);
+            this.btnReceipt.Size = new System.Drawing.Size(191, 73);
             this.btnReceipt.TabIndex = 3;
             this.btnReceipt.Text = "Hóa Đơn";
             this.btnReceipt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,9 +163,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnAccount.FlatAppearance.BorderSize = 0;
             this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.Location = new System.Drawing.Point(30, 251);
+            this.btnAccount.Location = new System.Drawing.Point(28, 219);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(191, 106);
+            this.btnAccount.Size = new System.Drawing.Size(191, 73);
             this.btnAccount.TabIndex = 3;
             this.btnAccount.Text = "Tài Khoản";
             this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -183,9 +181,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnBook.FlatAppearance.BorderSize = 0;
             this.btnBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBook.Image")));
-            this.btnBook.Location = new System.Drawing.Point(30, 145);
+            this.btnBook.Location = new System.Drawing.Point(28, 146);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(191, 106);
+            this.btnBook.Size = new System.Drawing.Size(191, 73);
             this.btnBook.TabIndex = 3;
             this.btnBook.Text = "      Sách";
             this.btnBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -212,7 +210,7 @@ namespace Proj_Book_Store_Manage.UI
             this.label1.Location = new System.Drawing.Point(97, 161);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 23);
+            this.label1.Size = new System.Drawing.Size(58, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
@@ -258,7 +256,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblInfo.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfo.Location = new System.Drawing.Point(262, 31);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(468, 39);
+            this.lblInfo.Size = new System.Drawing.Size(391, 32);
             this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = "QUẢN LÝ DỮ LIỆU NHÀ SÁCH";
             // 
@@ -282,7 +280,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblRole.ForeColor = System.Drawing.Color.Black;
             this.lblRole.Location = new System.Drawing.Point(537, 18);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(63, 23);
+            this.lblRole.Size = new System.Drawing.Size(51, 19);
             this.lblRole.TabIndex = 3;
             this.lblRole.Text = "None";
             // 
@@ -292,7 +290,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblNameEmployee.ForeColor = System.Drawing.Color.Black;
             this.lblNameEmployee.Location = new System.Drawing.Point(160, 18);
             this.lblNameEmployee.Name = "lblNameEmployee";
-            this.lblNameEmployee.Size = new System.Drawing.Size(63, 23);
+            this.lblNameEmployee.Size = new System.Drawing.Size(51, 19);
             this.lblNameEmployee.TabIndex = 2;
             this.lblNameEmployee.Text = "None";
             // 
@@ -302,7 +300,7 @@ namespace Proj_Book_Store_Manage.UI
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(465, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 23);
+            this.label3.Size = new System.Drawing.Size(50, 19);
             this.label3.TabIndex = 1;
             this.label3.Text = "Role :";
             // 
@@ -312,7 +310,7 @@ namespace Proj_Book_Store_Manage.UI
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(50, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 23);
+            this.label2.Size = new System.Drawing.Size(83, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Welcome";
             // 
@@ -320,9 +318,6 @@ namespace Proj_Book_Store_Manage.UI
             // 
             this.panelMain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelMain.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelMain.Location = new System.Drawing.Point(227, 151);
-            this.panelMain.MaximumSize = new System.Drawing.Size(1055, 629);
-
             this.panelMain.Location = new System.Drawing.Point(229, 152);
             this.panelMain.MaximumSize = new System.Drawing.Size(1280, 629);
             this.panelMain.MinimumSize = new System.Drawing.Size(1055, 629);
@@ -332,11 +327,10 @@ namespace Proj_Book_Store_Manage.UI
             // 
             // FormDashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1294, 789);
-            this.ClientSize = new System.Drawing.Size(1331, 774);
+            this.ClientSize = new System.Drawing.Size(1331, 788);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

@@ -116,12 +116,12 @@ namespace Proj_Book_Store_Manage.UI
             // dgvPublisher
             // 
             this.dgvPublisher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPublisher.Location = new System.Drawing.Point(30, 259);
+            this.dgvPublisher.Location = new System.Drawing.Point(30, 225);
             this.dgvPublisher.Name = "dgvPublisher";
             this.dgvPublisher.ReadOnly = true;
             this.dgvPublisher.RowHeadersWidth = 51;
             this.dgvPublisher.RowTemplate.Height = 24;
-            this.dgvPublisher.Size = new System.Drawing.Size(721, 280);
+            this.dgvPublisher.Size = new System.Drawing.Size(721, 276);
             this.dgvPublisher.TabIndex = 5;
             this.dgvPublisher.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPublisher_CellClick);
             // 
@@ -135,15 +135,15 @@ namespace Proj_Book_Store_Manage.UI
             this.panel2.Controls.Add(this.btnSave);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(849, 208);
+            this.panel2.Location = new System.Drawing.Point(768, 208);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 355);
+            this.panel2.Size = new System.Drawing.Size(287, 303);
             this.panel2.TabIndex = 4;
             // 
             // btnReload
             // 
             this.btnReload.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReload.Location = new System.Drawing.Point(52, 312);
+            this.btnReload.Location = new System.Drawing.Point(168, 135);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(110, 43);
             this.btnReload.TabIndex = 1;
@@ -154,7 +154,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(52, 17);
+            this.btnAdd.Location = new System.Drawing.Point(35, 17);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(110, 43);
             this.btnAdd.TabIndex = 1;
@@ -165,7 +165,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(52, 76);
+            this.btnEdit.Location = new System.Drawing.Point(35, 76);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(110, 43);
             this.btnEdit.TabIndex = 1;
@@ -176,7 +176,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(52, 253);
+            this.btnCancel.Location = new System.Drawing.Point(168, 76);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 43);
             this.btnCancel.TabIndex = 1;
@@ -187,7 +187,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(52, 135);
+            this.btnDelete.Location = new System.Drawing.Point(35, 135);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(110, 43);
             this.btnDelete.TabIndex = 1;
@@ -198,7 +198,7 @@ namespace Proj_Book_Store_Manage.UI
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(52, 194);
+            this.btnSave.Location = new System.Drawing.Point(168, 17);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(110, 43);
             this.btnSave.TabIndex = 1;
@@ -324,7 +324,7 @@ namespace Proj_Book_Store_Manage.UI
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "UControlPublisher";
-            this.Size = new System.Drawing.Size(1055, 563);
+            this.Size = new System.Drawing.Size(1055, 511);
             this.Load += new System.EventHandler(this.UControlPublisher_Load);
             this.gpSearch.ResumeLayout(false);
             this.gpSearch.PerformLayout();

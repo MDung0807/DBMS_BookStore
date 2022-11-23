@@ -64,7 +64,6 @@ namespace Proj_Book_Store_Manage.UI
                     {
                         if (employee.deleteEmployee(utl.IDCurrent, ref err) == true)
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show("Xoá thất bại !");
@@ -102,7 +101,6 @@ namespace Proj_Book_Store_Manage.UI
                         employee.addNewEmployee(this.lblIDEmployee.Text, this.txtFirstName.Text, this.txtMiddleName.Text, this.txtLastName.Text, this.cbSex.Text.ToString(), this.txtAddress.Text, this.txtPhoneNumber.Text, this.txtEmail.Text,  this.dtpBirth.Value.Date, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm thông tin nhân viên thành công !");
                         }
                         else
                         {
@@ -121,7 +119,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa thông tin loại khách hàng thành công !");
                     }
                     else
                     {

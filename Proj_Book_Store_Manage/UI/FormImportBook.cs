@@ -35,7 +35,6 @@ namespace Proj_Book_Store_Manage.UI
             importBook.addNewItemIntoWarehouse(this.cbIdBook.Text, int.Parse(this.txtAmountBook.Text.ToString()), ref err);
             if (err == "")
             {
-                MessageBox.Show("Thành công");
             }
             else
             {
