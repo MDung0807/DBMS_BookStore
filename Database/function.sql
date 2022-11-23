@@ -71,14 +71,24 @@ begin
 	return @idAuthor
 end
 go
-
 ---Trả về idBIllOuput nếu đơn hàng false
-create or alter function func_returnIdBillFalse ()
+create or alter function func_returnIdBillOutFalse ()
 returns varchar(8)
 as
 begin
 	declare @idBill varchar (8)
 	select @idBill = idBillOutPut from BILLOUTPUT
+	where stateBill = 0
+	return @idBill
+end
+go
+---Trả về idBIllInput nếu đơn hàng false
+create or alter function func_returnIdBillInFalse ()
+returns varchar(8)
+as
+begin
+	declare @idBill varchar (8)
+	select @idBill = idBillInput from BILLINPUT
 	where stateBill = 0
 	return @idBill
 end
@@ -303,9 +313,8 @@ as
 				nameTypeCus = @name
 	)
 go
-select * from dbo.func_searchTypeCustomer (null, N'Vàng')
 --- Hàm tìm kiếm hóa đơn Nhập hàng
-Create or alter function func_searchReceiptImport(@idBill varchar(8) )
+create or alter function func_searchReceiptImport(@idBill varchar(8) )
 returns table
 as
 	return (

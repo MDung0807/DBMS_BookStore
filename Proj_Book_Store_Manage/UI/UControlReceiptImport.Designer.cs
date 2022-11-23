@@ -30,14 +30,14 @@ namespace Proj_Book_Store_Manage.UI
         private void InitializeComponent()
         {
             this.gbReceiptImport = new System.Windows.Forms.GroupBox();
+            this.lblDateImport = new System.Windows.Forms.Label();
             this.lbIdEmployee = new System.Windows.Forms.Label();
-            this.dtpReceiptImport = new System.Windows.Forms.DateTimePicker();
             this.lblIDBill = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblInfoTotal = new System.Windows.Forms.Label();
             this.lbl10 = new System.Windows.Forms.Label();
             this.lblEmployee = new System.Windows.Forms.Label();
-            this.lblDateImport = new System.Windows.Forms.Label();
+            this.lbl14 = new System.Windows.Forms.Label();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -58,14 +58,14 @@ namespace Proj_Book_Store_Manage.UI
             // 
             // gbReceiptImport
             // 
+            this.gbReceiptImport.Controls.Add(this.lblDateImport);
             this.gbReceiptImport.Controls.Add(this.lbIdEmployee);
-            this.gbReceiptImport.Controls.Add(this.dtpReceiptImport);
             this.gbReceiptImport.Controls.Add(this.lblIDBill);
             this.gbReceiptImport.Controls.Add(this.lblTotal);
             this.gbReceiptImport.Controls.Add(this.lblInfoTotal);
             this.gbReceiptImport.Controls.Add(this.lbl10);
             this.gbReceiptImport.Controls.Add(this.lblEmployee);
-            this.gbReceiptImport.Controls.Add(this.lblDateImport);
+            this.gbReceiptImport.Controls.Add(this.lbl14);
             this.gbReceiptImport.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbReceiptImport.Location = new System.Drawing.Point(30, 21);
             this.gbReceiptImport.Margin = new System.Windows.Forms.Padding(4);
@@ -76,6 +76,16 @@ namespace Proj_Book_Store_Manage.UI
             this.gbReceiptImport.TabStop = false;
             this.gbReceiptImport.Text = "Thông tin nhập sách";
             // 
+            // lblDateImport
+            // 
+            this.lblDateImport.AutoSize = true;
+            this.lblDateImport.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateImport.Location = new System.Drawing.Point(192, 82);
+            this.lblDateImport.Name = "lblDateImport";
+            this.lblDateImport.Size = new System.Drawing.Size(58, 23);
+            this.lblDateImport.TabIndex = 5;
+            this.lblDateImport.Text = "None";
+            // 
             // lbIdEmployee
             // 
             this.lbIdEmployee.AutoSize = true;
@@ -83,18 +93,9 @@ namespace Proj_Book_Store_Manage.UI
             this.lbIdEmployee.Location = new System.Drawing.Point(412, 37);
             this.lbIdEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbIdEmployee.Name = "lbIdEmployee";
-            this.lbIdEmployee.Size = new System.Drawing.Size(18, 20);
+            this.lbIdEmployee.Size = new System.Drawing.Size(21, 23);
             this.lbIdEmployee.TabIndex = 4;
             this.lbIdEmployee.Text = "0";
-            // 
-            // dtpReceiptImport
-            // 
-            this.dtpReceiptImport.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpReceiptImport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReceiptImport.Location = new System.Drawing.Point(189, 84);
-            this.dtpReceiptImport.Name = "dtpReceiptImport";
-            this.dtpReceiptImport.Size = new System.Drawing.Size(200, 27);
-            this.dtpReceiptImport.TabIndex = 3;
             // 
             // lblIDBill
             // 
@@ -103,7 +104,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblIDBill.Location = new System.Drawing.Point(123, 36);
             this.lblIDBill.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDBill.Name = "lblIDBill";
-            this.lblIDBill.Size = new System.Drawing.Size(18, 20);
+            this.lblIDBill.Size = new System.Drawing.Size(21, 23);
             this.lblIDBill.TabIndex = 1;
             this.lblIDBill.Text = "0";
             // 
@@ -114,7 +115,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblTotal.Location = new System.Drawing.Point(123, 141);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(18, 20);
+            this.lblTotal.Size = new System.Drawing.Size(21, 23);
             this.lblTotal.TabIndex = 1;
             this.lblTotal.Text = "0";
             // 
@@ -125,7 +126,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblInfoTotal.Location = new System.Drawing.Point(8, 142);
             this.lblInfoTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInfoTotal.Name = "lblInfoTotal";
-            this.lblInfoTotal.Size = new System.Drawing.Size(82, 20);
+            this.lblInfoTotal.Size = new System.Drawing.Size(96, 23);
             this.lblInfoTotal.TabIndex = 1;
             this.lblInfoTotal.Text = "Tổng tiền";
             // 
@@ -136,7 +137,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lbl10.Location = new System.Drawing.Point(8, 37);
             this.lbl10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(63, 20);
+            this.lbl10.Size = new System.Drawing.Size(78, 23);
             this.lbl10.TabIndex = 1;
             this.lbl10.Text = "ID Bill:";
             // 
@@ -147,20 +148,20 @@ namespace Proj_Book_Store_Manage.UI
             this.lblEmployee.Location = new System.Drawing.Point(271, 37);
             this.lblEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(118, 20);
+            this.lblEmployee.Size = new System.Drawing.Size(145, 23);
             this.lblEmployee.TabIndex = 1;
             this.lblEmployee.Text = "Mã Nhân Viên";
             // 
-            // lblDateImport
+            // lbl14
             // 
-            this.lblDateImport.AutoSize = true;
-            this.lblDateImport.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateImport.Location = new System.Drawing.Point(8, 82);
-            this.lblDateImport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDateImport.Name = "lblDateImport";
-            this.lblDateImport.Size = new System.Drawing.Size(134, 20);
-            this.lblDateImport.TabIndex = 0;
-            this.lblDateImport.Text = "Ngày Nhập Sách";
+            this.lbl14.AutoSize = true;
+            this.lbl14.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl14.Location = new System.Drawing.Point(8, 82);
+            this.lbl14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl14.Name = "lbl14";
+            this.lbl14.Size = new System.Drawing.Size(164, 23);
+            this.lbl14.TabIndex = 0;
+            this.lbl14.Text = "Ngày Nhập Sách";
             // 
             // btnReload
             // 
@@ -202,7 +203,7 @@ namespace Proj_Book_Store_Manage.UI
             this.cbAttributeSearch.FormattingEnabled = true;
             this.cbAttributeSearch.Location = new System.Drawing.Point(20, 50);
             this.cbAttributeSearch.Name = "cbAttributeSearch";
-            this.cbAttributeSearch.Size = new System.Drawing.Size(224, 28);
+            this.cbAttributeSearch.Size = new System.Drawing.Size(224, 31);
             this.cbAttributeSearch.TabIndex = 1;
             // 
             // gpSearch
@@ -235,7 +236,7 @@ namespace Proj_Book_Store_Manage.UI
             this.txtSearch.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(20, 97);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(224, 27);
+            this.txtSearch.Size = new System.Drawing.Size(224, 32);
             this.txtSearch.TabIndex = 2;
             // 
             // lblSearchBy
@@ -245,7 +246,7 @@ namespace Proj_Book_Store_Manage.UI
             this.lblSearchBy.Location = new System.Drawing.Point(16, 27);
             this.lblSearchBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchBy.Name = "lblSearchBy";
-            this.lblSearchBy.Size = new System.Drawing.Size(91, 20);
+            this.lblSearchBy.Size = new System.Drawing.Size(109, 23);
             this.lblSearchBy.TabIndex = 0;
             this.lblSearchBy.Text = "Thuộc tính";
             // 
@@ -309,9 +310,8 @@ namespace Proj_Book_Store_Manage.UI
         #endregion
 
         private System.Windows.Forms.GroupBox gbReceiptImport;
-        private System.Windows.Forms.DateTimePicker dtpReceiptImport;
         private System.Windows.Forms.Label lblEmployee;
-        private System.Windows.Forms.Label lblDateImport;
+        private System.Windows.Forms.Label lbl14;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel panel2;
@@ -328,5 +328,6 @@ namespace Proj_Book_Store_Manage.UI
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.Label lbIdEmployee;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblDateImport;
     }
 }

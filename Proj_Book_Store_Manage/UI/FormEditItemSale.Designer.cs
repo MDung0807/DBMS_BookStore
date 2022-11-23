@@ -40,10 +40,9 @@ namespace Proj_Book_Store_Manage.UI
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.lblInfoAmount = new System.Windows.Forms.Label();
-            this.nnrAmount = new System.Windows.Forms.NumericUpDown();
             this.lblIdBook = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.nnrAmount)).BeginInit();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel4
@@ -153,13 +152,6 @@ namespace Proj_Book_Store_Manage.UI
             this.lblInfoAmount.TabIndex = 19;
             this.lblInfoAmount.Text = "Số lượng còn trong kho: ";
             // 
-            // nnrAmount
-            // 
-            this.nnrAmount.Location = new System.Drawing.Point(217, 215);
-            this.nnrAmount.Name = "nnrAmount";
-            this.nnrAmount.Size = new System.Drawing.Size(120, 22);
-            this.nnrAmount.TabIndex = 20;
-            // 
             // lblIdBook
             // 
             this.lblIdBook.AutoSize = true;
@@ -181,14 +173,21 @@ namespace Proj_Book_Store_Manage.UI
             this.label4.TabIndex = 22;
             this.label4.Text = "UPDATE AMOUNT";
             // 
+            // txtAmount
+            // 
+            this.txtAmount.Location = new System.Drawing.Point(217, 214);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(155, 22);
+            this.txtAmount.TabIndex = 23;
+            // 
             // FormEditItemSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(540, 356);
+            this.Controls.Add(this.txtAmount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblIdBook);
-            this.Controls.Add(this.nnrAmount);
             this.Controls.Add(this.lblInfoAmount);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -205,7 +204,6 @@ namespace Proj_Book_Store_Manage.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditDetailReceiptExport";
             this.Load += new System.EventHandler(this.FormEditDetailReceiptExport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nnrAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,8 +222,8 @@ namespace Proj_Book_Store_Manage.UI
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblInfoAmount;
-        private System.Windows.Forms.NumericUpDown nnrAmount;
         private System.Windows.Forms.Label lblIdBook;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtAmount;
     }
 }
