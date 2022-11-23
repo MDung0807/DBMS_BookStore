@@ -65,7 +65,7 @@ namespace Proj_Book_Store_Manage.BSLayer
             //String sqlString = "exec proc_updateAccount @idAccount = " + idAccount + ", @nameAccount = '" + nameAccount + "', @password = '" + password + "', @typeOfAcc = " + typeOfAcc + ", @idEmployee = " + idEmployee;
             return db.ExecuteProcedure(strSQL, CommandType.StoredProcedure, parameters, ref err);
         }
-        public bool deleteAccount(int idAccount, ref string err)
+        public bool deleteAccount(string idAccount, ref string err)
         {
             strSQL = "proc_DeleteAccount";
             parameters = new List<SqlParameter>();

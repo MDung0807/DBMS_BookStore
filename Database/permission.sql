@@ -92,7 +92,9 @@ begin
 		commit transaction deleteUser
 	end try
 	begin catch
-		print (error_message())
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction deleteUser
 	end catch
 end

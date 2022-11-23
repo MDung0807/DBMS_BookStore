@@ -29,7 +29,9 @@ begin
 	commit transaction addNewAcc
 	end try
 	begin catch
-		print (error_message())
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction addNewAcc
 	end catch
 end
@@ -51,7 +53,9 @@ begin
 		commit transaction udpateAcc
 	end try
 	begin catch
-		print (error_message())
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction updateAcc
 	end catch
 end
@@ -74,7 +78,9 @@ begin
 		commit transaction deleteAcc
 	end try
 	begin catch
-		print error_message()
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction deleteAcc
 	end catch
 end
