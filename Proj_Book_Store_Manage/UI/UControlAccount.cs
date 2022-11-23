@@ -66,8 +66,8 @@ namespace Proj_Book_Store_Manage.UI
                     result = MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        int idAuthor = Convert.ToInt32(this.lblID.Text);
-                        account.deleteAccount(idAuthor, ref err);
+                        string idAccount = this.lblID.Text;
+                        account.deleteAccount(idAccount, ref err);
                         if (err == "")
                         {
                         }
