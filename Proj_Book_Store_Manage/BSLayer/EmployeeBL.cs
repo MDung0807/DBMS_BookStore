@@ -114,6 +114,12 @@ namespace Proj_Book_Store_Manage.BSLayer
             }
             return dataIDEmp;
         }
+<<<<<<< HEAD
+        public DataTable searchEmployee(string id, string username, ref string err)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"select * from dbo.func_searchEmployee('{id}', N'{username}')";
+=======
         /*public DataTable searchAccount(int idAccount, string userName, string password, bool typeOfAcc, int idEmp, ref string err)
         {
             strSQL = "func_searchAccount";
@@ -142,6 +148,7 @@ namespace Proj_Book_Store_Manage.BSLayer
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"select * from dbo.func_searchEmployee('{id}', N'{name}')";
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);

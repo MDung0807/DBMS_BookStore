@@ -27,7 +27,6 @@ namespace Proj_Book_Store_Manage.DBLayer
                 cmd = conn.CreateCommand();
                 dt = new DataTable();
         }
-        //Trả về Datatable để load dữ liệu lên form từ view
         public DataTable LoadData(string nameView, CommandType ct)
         {
             dt = new DataTable();
@@ -43,7 +42,6 @@ namespace Proj_Book_Store_Manage.DBLayer
             conn.Close();
             return dt;
         }
-        //Trả về Datatable để thực thi function
         public DataTable ExecuteFunction(SqlCommand cmdFunction, ref string error)
         {
             error = "";
@@ -60,7 +58,6 @@ namespace Proj_Book_Store_Manage.DBLayer
             }
             catch (SqlException ex)
             {
-                //MessageBox.Show(ex.Message.ToString());
                 error = ex.Message;
                 MessageBox.Show(error);
                 dt = null;
@@ -88,7 +85,6 @@ namespace Proj_Book_Store_Manage.DBLayer
             }
             catch (SqlException ex)
             {
-                //MessageBox.Show(ex.Message.ToString());
                 error = ex.Message;
                 MessageBox.Show(error);
             }
@@ -185,12 +181,9 @@ namespace Proj_Book_Store_Manage.DBLayer
                 adapter = new SqlDataAdapter(cmd);
                 dt = new DataTable();
                 adapter.Fill(dt);
-                //cmd.ExecuteNonQuery();
-                //f = true;
             }
             catch (SqlException ex)
             {
-                //MessageBox.Show(ex.Message.ToString());
                 error = ex.Message;
             }
             finally

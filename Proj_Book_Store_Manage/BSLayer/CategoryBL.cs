@@ -39,7 +39,6 @@ namespace Proj_Book_Store_Manage.BSLayer
             parameter = new SqlParameter("@describleCategory", describle);
             parameters.Add(parameter);
 
-            //String sqlString = "exec"+ @nameAccount = '" + nameAccount + "', @password = '" + passWord + "', @typeOfAcc = " + typeOfAcc.ToString() + ", @idEmployee = " + idEmployee.ToString() ;
             return db.ExecuteProcedure(strSQL, CommandType.StoredProcedure, parameters, ref err);
         }
         public bool modifyCategory(string idCategory, string nameCategory, string describle, ref string err)
@@ -79,6 +78,12 @@ namespace Proj_Book_Store_Manage.BSLayer
             }
             return dataNameCategory;
         }
+<<<<<<< HEAD
+        public DataTable searchCategory(string id, string username, ref string err)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', N'{username}')";
+=======
         /*public DataTable searchAccount(int idAccount, string userName, string password, bool typeOfAcc, int idEmp, ref string err)
         {
             strSQL = "func_searchAccount";
@@ -107,6 +112,7 @@ namespace Proj_Book_Store_Manage.BSLayer
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', N'{name}')";
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);

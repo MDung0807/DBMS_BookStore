@@ -29,7 +29,10 @@ begin
 	commit transaction addNewAcc
 	end try
 	begin catch
+<<<<<<< HEAD
+=======
 		raiserror(N'Không thể tạo quyền cho user',16,1)
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		rollback transaction addNewAcc
 	end catch
 end
@@ -851,7 +854,7 @@ begin
 	end catch
 end
 go
-
+exec proc_confirmBillExport 'HDX3','2022-11-17','KH10','NV1','VC1'
 --Xác nhận xuất hóa đơn
 create or alter procedure proc_confirmBillExport
 @idBillOutput varchar(8),
@@ -863,8 +866,8 @@ as
 begin
 	declare @totalOfBill int , @discountOfVoucher int, @discountOfTypeCus int
 
-	begin transaction
-	begin try
+	--begin transaction
+	--begin try
 		--Lấy ra giá trị hóa đơn và giá trị chiết khấu
 		select @totalOfBill=dbo.BILLOUTPUT.total
 		from dbo.BILLOUTPUT
@@ -899,19 +902,38 @@ begin
 		update dbo.BILLOUTPUT
 		set dateOfBill=@dateTimeOfBill, idCus=@idCus, idEmployee=@idEmp, idVoucher=@idVoucher, total=@totalOfBill, stateBill=1
 		where dbo.BILLOUTPUT.idBillOutPut=@idBillOutput
+<<<<<<< HEAD
+
+=======
 		
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		--Cập nhật lại số lượng voucher
 		if(@idVoucher is not null)
 		begin
 			update dbo.VOUCHER
 			set amount=amount-1
+<<<<<<< HEAD
+			where dbo.VOUCHER.idVoucher=@idVoucher
+=======
 			where idVoucher=@idVoucher
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		end
 		--Cập lại điểm tích lũy và Type cho khách hàng
 		declare @amountBookInBill int, @amountBookTotal int
 		select @amountBookInBill=(select sum(amountOutput) from dbo.BOOK_BILLOUTPUT where dbo.BOOK_BILLOUTPUT.idBillOutput=@idBillOutput)
 		select @amountBookTotal=@amountBookInBill+(select dbo.CUSTOMER.pointCus from dbo.CUSTOMER where dbo.CUSTOMER.idCus=@idCus)
 		exec proc_updateTypeCusForCus @amountBooksBought=@amountBookTotal, @idCus=@idCus
+<<<<<<< HEAD
+		--Cập nhật trạng thái của đơn hàng
+		update dbo.BILLOUTPUT
+		set stateBill = 1
+		where dbo.BILLOUTPUT.idBillOutPut = @idBillOutput
+	--	commit transaction
+	--end try
+	--begin catch
+	--	rollback transaction
+	--end catch
+=======
 		commit transaction
 	end try
 	begin catch
@@ -920,6 +942,7 @@ begin
 		raiserror (@errorMess, 16, 1)
 		rollback transaction
 	end catch
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 end
 go
 --Xóa một item trong hóa đơn
@@ -1046,8 +1069,14 @@ go
 
 ----------------------------------------------Tân thêm-------------------------------
 ---Procedure show doanh thu trong khoảng begin end---
+<<<<<<< HEAD
+create or alter procedure proc_ShowRevenue
+@begin date, 
+@end date
+=======
 create or alter proc proc_ShowRevenue
 @begin date , @end date
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 as
 begin
 	select convert(date,dateOfBill) as dateOfBill, sum(total) as total
@@ -1100,3 +1129,4 @@ begin
 	and BILLOUTPUT.idBillOutPut= BOOK_BILLOUTPUT.idBillOutput
 	and dateOfBill between @begin and @end
 end
+go
