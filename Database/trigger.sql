@@ -20,6 +20,8 @@ begin
 	end
 end
 go
+
+--- Kiểm tra số lượng sách trong kho có đủ để thêm vào BOOK_BILLOUTPUT
 create or alter trigger trg_checkUpdateCart
 on dbo.BOOK_BILLOUTPUT
 for update

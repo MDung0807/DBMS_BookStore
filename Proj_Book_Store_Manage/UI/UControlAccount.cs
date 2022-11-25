@@ -66,11 +66,10 @@ namespace Proj_Book_Store_Manage.UI
                     result = MessageBox.Show("Bạn có chắc chắn muốn xóa không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        int idAuthor = Convert.ToInt32(this.lblID.Text);
-                        account.deleteAccount(idAuthor, ref err);
+                        string idAccount = this.lblID.Text;
+                        account.deleteAccount(idAccount, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show(err);
@@ -112,7 +111,6 @@ namespace Proj_Book_Store_Manage.UI
                         account.addNewAccount(this.lblID.Text, this.txtUserName.Text, this.txtPassword.Text, roleTemp, this.cbEmployee.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm tài khoản thành công !");
                         }
                         else
                         {
@@ -132,7 +130,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa tài khoản thành công !");
                     }
                     else
                     {

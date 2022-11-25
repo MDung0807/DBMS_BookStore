@@ -90,10 +90,14 @@ namespace Proj_Book_Store_Manage.BSLayer
             return dataIDCustomer;
         }
 
-        public DataTable searchCustomer(string id, string username, ref string err)
+        public DataTable searchCustomer(string id, string name, ref string err)
         {
             SqlCommand cmd = new SqlCommand();
+<<<<<<< HEAD
             cmd.CommandText = $"select * from dbo.func_searchCustomer('{id}', N'{username}')";
+=======
+            cmd.CommandText = $"select * from dbo.func_searchCustomer('{id}', '{name}')";
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);

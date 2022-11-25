@@ -118,7 +118,11 @@ idAccount varchar(8) NOT NULL,
 nameAccount varchar(20) NOT NULL unique,
 password varchar(30) NOT NULL,
 typeOfAcc bit NOT NULL,
+<<<<<<< HEAD
 idEmployee varchar(8) NULL 
+=======
+idEmployee varchar(8) NULL unique,
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 
 CONSTRAINT pk_account PRIMARY KEY (idAccount),
 CONSTRAINT fk_acc_Of_Employee FOREIGN KEY (idEmployee) REFERENCES EMPLOYEE (idEmployee),
@@ -161,6 +165,8 @@ idBillInput varchar(8) NOT NULL,
 dateOfInput date NULL,
 total int NOT NULL DEFAULT 0,
 idEmployee varchar(8) NULL,
+stateBill bit default 0
+
 
 CONSTRAINT pk_billinput PRIMARY KEY (idBillInput),
 CONSTRAINT fk_employee_checkin FOREIGN KEY (idEmployee) REFERENCES EMPLOYEE (idEmployee)

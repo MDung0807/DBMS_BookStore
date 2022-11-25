@@ -30,7 +30,7 @@ namespace Proj_Book_Store_Manage.UI
         }
         private void editValue()
         {
-            if (this.nnrAmount.Value == 0)
+            if (int.Parse(this.txtAmount.Text.ToString()) == 0)
             {
                 result = MessageBox.Show("Xác nhận xóa khỏi đơn hàng ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
                 if (result == DialogResult.OK)
@@ -39,10 +39,9 @@ namespace Proj_Book_Store_Manage.UI
                 }
                 return;
             }
-            importBook.modifyItemInCart(this.idBook, this.amount, int.Parse(this.nnrAmount.Text.ToString()), ref err);
+            importBook.modifyItemInCart(this.idBook, this.amount, int.Parse(this.txtAmount.Text.ToString()), ref err);
             if (err == "")
             {
-                result = MessageBox.Show("Cập nhật thành công");
             }
             else
             {
@@ -53,8 +52,7 @@ namespace Proj_Book_Store_Manage.UI
         {
             this.lblIdBook.Text = idBook;
             this.lblNameBook.Text = book.getNameBook(idBook, ref err).ToString();
-            this.lblInfoAmount.Text = "Số lượng sách còn trong kho: " + book.getAmountBook(idBook, ref err).ToString();
-            this.nnrAmount.Value = this.amount;
+            this.txtAmount.Text = this.amount.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

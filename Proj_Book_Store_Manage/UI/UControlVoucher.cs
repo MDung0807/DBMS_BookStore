@@ -69,7 +69,6 @@ namespace Proj_Book_Store_Manage.UI
                         if ( err == "")
                         {
 
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show(err);
@@ -106,7 +105,6 @@ namespace Proj_Book_Store_Manage.UI
                         voucher.addNewVoucher(this.lblID.Text, int.Parse(this.txtValueVoucher.Text), this.txtEvent.Text, this.dtpDateStart.Value.Date, this.dtpDateEnd.Value.Date, int.Parse(this.txtAmount.Text), ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm voucher thành công !");
                         }
                         else
                         {
@@ -125,7 +123,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa thông tin voucher thành công !");
                     }
                     else
                     {

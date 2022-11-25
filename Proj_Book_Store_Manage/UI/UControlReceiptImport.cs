@@ -28,8 +28,6 @@ namespace Proj_Book_Store_Manage.UI
         public UControlReceiptImport()
         {
             InitializeComponent();
-            dtpReceiptImport.Format = DateTimePickerFormat.Custom;
-            dtpReceiptImport.CustomFormat = "dd-MM-yyyy";
             this.lbIdEmployee.Text = frmLogin.idEmp;
             createAttributeComBoBox();
             receiptImport = new ReceiptImportBL();
@@ -102,7 +100,9 @@ namespace Proj_Book_Store_Manage.UI
             {
                 utl.CellClick(btnDetailImportReceipt);
                 this.lblIDBill.Text = dgvReceiptImport.Rows[utl.rowCurrent].Cells[0].Value.ToString();
-                this.dtpReceiptImport.Text = dgvReceiptImport.Rows[utl.rowCurrent].Cells[1].Value.ToString();
+
+                string datetime = DateTime.Parse(dgvReceiptImport.Rows[utl.rowCurrent].Cells[1].Value.ToString()).ToString("dd/MM/yyyy");
+                this.lblDateImport.Text = datetime;
                 this.lblTotal.Text = dgvReceiptImport.Rows[utl.rowCurrent].Cells[2].Value.ToString();      
                 this.lbIdEmployee.Text = dgvReceiptImport.Rows[utl.rowCurrent].Cells[3].Value.ToString();
             }
@@ -118,6 +118,7 @@ namespace Proj_Book_Store_Manage.UI
         }
         private void LoadData()
         {
+            updateBill();
             dtReceiptImport = receiptImport.getDataReceiptImport();
             dgvReceiptImport.DataSource = dtReceiptImport;
             utl = new Utilities(dgvReceiptImport);
@@ -147,7 +148,22 @@ namespace Proj_Book_Store_Manage.UI
             param.Add("Id Receipt Import");
             this.cbAttributeSearch.DataSource = param;
         }
+        void updateBill()
+        {
+            try
+            {
 
+                receiptImport.updateBill(ref err);
+                if (err != "")
+                {
+                    MessageBox.Show(err);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         string getParameter()
         {
             string id;

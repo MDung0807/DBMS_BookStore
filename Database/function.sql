@@ -28,6 +28,7 @@ begin
 end
 go
 
+<<<<<<< HEAD
 --Tìm kiếm một Account
 --create or alter function func_searchAccount(@idAcc varchar(8) , @userName varchar(20), @password varchar(30), @typeAcc bit, @idEmp varchar(8) )
 --returns table
@@ -40,6 +41,8 @@ go
 --			ACCOUNT.typeOfAcc = typeOfAcc and 
 --			ACCOUNT.idEmployee=@idEmp )
 --go
+=======
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 --Trả về danh sách các thể loại của sách
 create or alter function func_getAllCategoryOfBook(@idBook varchar(8) )
 returns table
@@ -83,14 +86,24 @@ begin
 	return @idAuthor
 end
 go
-
 ---Trả về idBIllOuput nếu đơn hàng false
-create or alter function func_returnIdBillFalse ()
+create or alter function func_returnIdBillOutFalse ()
 returns varchar(8)
 as
 begin
 	declare @idBill varchar (8)
 	select @idBill = idBillOutPut from BILLOUTPUT
+	where stateBill = 0
+	return @idBill
+end
+go
+---Trả về idBIllInput nếu đơn hàng false
+create or alter function func_returnIdBillInFalse ()
+returns varchar(8)
+as
+begin
+	declare @idBill varchar (8)
+	select @idBill = idBillInput from BILLINPUT
 	where stateBill = 0
 	return @idBill
 end
@@ -147,7 +160,7 @@ go
 ----------------------------------------------CHỨC NĂNG XEM CHI TIẾT ĐƠN HÀNG XUất---------------
 --Trả về tên sách
 create or alter function func_getNameBookById(@idBook varchar(8) )
-returns varchar(20)
+returns nvarchar(20)
 begin
 	return (select dbo.BOOK.nameBook
 	from dbo.BOOK
@@ -315,9 +328,8 @@ as
 				nameTypeCus = @name
 	)
 go
-
 --- Hàm tìm kiếm hóa đơn Nhập hàng
-Create or alter function func_searchReceiptImport(@idBill varchar(8) )
+create or alter function func_searchReceiptImport(@idBill varchar(8) )
 returns table
 as
 	return (

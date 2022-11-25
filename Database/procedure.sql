@@ -29,6 +29,10 @@ begin
 	commit transaction addNewAcc
 	end try
 	begin catch
+<<<<<<< HEAD
+=======
+		raiserror(N'Không thể tạo quyền cho user',16,1)
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		rollback transaction addNewAcc
 	end catch
 end
@@ -50,7 +54,9 @@ begin
 		commit transaction udpateAcc
 	end try
 	begin catch
-		print (error_message())
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction updateAcc
 	end catch
 end
@@ -73,7 +79,9 @@ begin
 		commit transaction deleteAcc
 	end try
 	begin catch
-		print error_message()
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
 		rollback transaction deleteAcc
 	end catch
 end
@@ -713,11 +721,10 @@ begin
 	end
 
 	update dbo.BILLINPUT
-	set dateOfInput=@dateTimeOfBill, idEmployee=@idEmp
+	set dateOfInput=@dateTimeOfBill, idEmployee=@idEmp, stateBill=1
 	where dbo.BILLINPUT.idBillInput=@idBillInput
 end
 go
-
 --Xác nhận hủy một hóa đơn đang thêm
 create or alter procedure proc_cancelBillImport
 @idBill varchar(8) 
@@ -893,21 +900,30 @@ begin
 
 		--Cập nhật hóa đơn vào bảng
 		update dbo.BILLOUTPUT
-		set dateOfBill=@dateTimeOfBill, idCus=@idCus, idEmployee=@idEmp, idVoucher=@idVoucher, total=@totalOfBill
+		set dateOfBill=@dateTimeOfBill, idCus=@idCus, idEmployee=@idEmp, idVoucher=@idVoucher, total=@totalOfBill, stateBill=1
 		where dbo.BILLOUTPUT.idBillOutPut=@idBillOutput
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		--Cập nhật lại số lượng voucher
 		if(@idVoucher is not null)
 		begin
 			update dbo.VOUCHER
 			set amount=amount-1
+<<<<<<< HEAD
 			where dbo.VOUCHER.idVoucher=@idVoucher
+=======
+			where idVoucher=@idVoucher
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 		end
 		--Cập lại điểm tích lũy và Type cho khách hàng
 		declare @amountBookInBill int, @amountBookTotal int
 		select @amountBookInBill=(select sum(amountOutput) from dbo.BOOK_BILLOUTPUT where dbo.BOOK_BILLOUTPUT.idBillOutput=@idBillOutput)
 		select @amountBookTotal=@amountBookInBill+(select dbo.CUSTOMER.pointCus from dbo.CUSTOMER where dbo.CUSTOMER.idCus=@idCus)
 		exec proc_updateTypeCusForCus @amountBooksBought=@amountBookTotal, @idCus=@idCus
+<<<<<<< HEAD
 		--Cập nhật trạng thái của đơn hàng
 		update dbo.BILLOUTPUT
 		set stateBill = 1
@@ -917,6 +933,16 @@ begin
 	--begin catch
 	--	rollback transaction
 	--end catch
+=======
+		commit transaction
+	end try
+	begin catch
+		declare @errorMess nvarchar(200)
+		set @errorMess = ERROR_MESSAGE()
+		raiserror (@errorMess, 16, 1)
+		rollback transaction
+	end catch
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 end
 go
 --Xóa một item trong hóa đơn
@@ -976,17 +1002,34 @@ end
 go
 
 
---Xóa bỏ đơn hàng khi trạng thái đơn hàng false
+--Xóa bỏ đơn hàng xuất khi trạng thái đơn hàng false
 create or alter procedure proc_deleteBillOutput 
 as
 begin
 	begin transaction
 	begin try
 		declare @idBillOutput varchar(8)
-		set @idBillOutput = (select dbo.func_returnIdBillFalse())
+		set @idBillOutput = (select dbo.func_returnIdBillOutFalse())
 	
-		print (@idBillOutput)
 		exec proc_cancelBillExport @idBillOutput
+		commit transaction
+	end try
+	begin catch 
+		rollback transaction
+	end catch
+end
+go
+
+--Xóa bỏ đơn hàng nhập khi trạng thái đơn hàng false
+create or alter procedure proc_deleteBillInput
+as
+begin
+	begin transaction
+	begin try
+		declare @idBillInput varchar(8)
+		set @idBillInput = (select dbo.func_returnIdBillInFalse())
+	
+		exec proc_cancelBillImport @idBillInput
 		commit transaction
 	end try
 	begin catch 
@@ -1026,9 +1069,14 @@ go
 
 ----------------------------------------------Tân thêm-------------------------------
 ---Procedure show doanh thu trong khoảng begin end---
+<<<<<<< HEAD
 create or alter procedure proc_ShowRevenue
 @begin date, 
 @end date
+=======
+create or alter proc proc_ShowRevenue
+@begin date , @end date
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
 as
 begin
 	select convert(date,dateOfBill) as dateOfBill, sum(total) as total

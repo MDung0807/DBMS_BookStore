@@ -78,10 +78,41 @@ namespace Proj_Book_Store_Manage.BSLayer
             }
             return dataNameCategory;
         }
+<<<<<<< HEAD
         public DataTable searchCategory(string id, string username, ref string err)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', N'{username}')";
+=======
+        /*public DataTable searchAccount(int idAccount, string userName, string password, bool typeOfAcc, int idEmp, ref string err)
+        {
+            strSQL = "func_searchAccount";
+            parameters = new List<SqlParameter>();
+
+            parameter = new SqlParameter("@idAcc", idAccount);
+            parameters.Add(parameter);
+
+            parameter = new SqlParameter("@userName", userName);
+            parameters.Add(parameter);
+
+            parameter = new SqlParameter("@password", password);
+            parameters.Add(parameter);
+
+            parameter = new SqlParameter("@typeAcc", typeOfAcc);
+            parameters.Add(parameter);
+
+            parameter = new SqlParameter("@idEmp", idEmp);
+            parameters.Add(parameter);
+
+            //String sqlString = "exec proc_updateAccount @idAccount = " + idAccount + ", @nameAccount = '" + nameAccount + "', @password = '" + password + "', @typeOfAcc = " + typeOfAcc + ", @idEmployee = " + idEmployee;
+            return db.ExecuteFunction(strSQL, CommandType.Text, parameters, ref err);
+        }*/
+
+        public DataTable searchCategory(string id, string name, ref string err)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = $"select * from dbo.func_searchCategory('{id}', N'{name}')";
+>>>>>>> 3b5fdf0e8bdb2b78f47b972214a931e6803d8031
             cmd.CommandType = CommandType.Text;
 
             return db.ExecuteFunction(cmd, ref err);

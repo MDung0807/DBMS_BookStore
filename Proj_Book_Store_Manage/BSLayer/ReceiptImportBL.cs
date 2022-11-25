@@ -81,5 +81,11 @@ namespace Proj_Book_Store_Manage.BSLayer
 
             return db.ExecuteFunction(cmd, ref err);
         }
+        public bool updateBill(ref string err)
+        {
+            strSQL = "proc_deleteBillInput";
+            return db.ExecuteProcedure(strSQL, CommandType.StoredProcedure, null, ref err);
+        }
+
     }
 }

@@ -65,7 +65,6 @@ namespace Proj_Book_Store_Manage.UI
                     {
                         if (customer.deleteCustomer(utl.IDCurrent, ref err) == true)
                         {
-                            MessageBox.Show("Xóa thành công !");
                         }
                         else
                             MessageBox.Show("Xoá thất bại !");
@@ -103,7 +102,6 @@ namespace Proj_Book_Store_Manage.UI
                         customer.addNewCustomer(this.lblIDCustomer.Text, this.txtNameCustomer.Text, this.txtAddCus.Text, this.txtPhoneNumberCus.Text, this.lblIdTypeCus.Text, ref err);
                         if (err == "")
                         {
-                            MessageBox.Show("Thêm thông tin khách hàng thành công !");
                         }
                         else
                         {
@@ -122,7 +120,6 @@ namespace Proj_Book_Store_Manage.UI
                     //LoadData();
                     if (err == "")
                     {
-                        MessageBox.Show("Sửa thông tin khách hàng thành công !");
                     }
                     else
                     {
